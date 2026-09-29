@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lakshman Ragul N | Business Analyst Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#07111f;
+    color:#f5f7fb;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,17,31,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #263449;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    color:#5ee7df;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#b5c1d4;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:#5ee7df;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:80px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.4fr .8fr;
+    gap:60px;
+    align-items:center;
+}
+
+.tag{
+    display:inline-block;
+    color:#5ee7df;
+    border:1px solid #315d66;
+    background:#10252d;
+    padding:7px 15px;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(45px,7vw,75px);
+    line-height:1.05;
+    margin-bottom:15px;
+}
+
+.gradient{
+    background:linear-gradient(90deg,#5ee7df,#4facfe);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero h2{
+    color:#b5c1d4;
+    font-size:25px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#aebbd0;
+    max-width:650px;
+    font-size:17px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn{
+    padding:13px 22px;
+    border-radius:10px;
+    font-weight:bold;
+    border:1px solid #34445a;
+    transition:.3s;
+}
+
+.primary{
+    background:linear-gradient(90deg,#5ee7df,#4facfe);
+    color:#06111f;
+}
+
+.secondary{
+    background:#111e30;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* PROFILE CARD */
+.profile-card{
+    background:#101d2e;
+    border:1px solid #29384c;
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+}
+
+.profile-icon{
+    width:145px;
+    height:145px;
+    margin:auto auto 20px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:50px;
+    font-weight:bold;
+    color:#06111f;
+    background:linear-gradient(135deg,#5ee7df,#4facfe);
+}
+
+.profile-card h3{
+    font-size:23px;
+}
+
+.profile-card p{
+    color:#aebbd0;
+}
+
+/* SECTIONS */
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title span{
+    color:#5ee7df;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:13px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin-top:5px;
+}
+
+.section-title p{
+    color:#aebbd0;
+    max-width:650px;
+    margin:10px auto;
+}
+
+/* CARDS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#101d2e;
+    border:1px solid #29384c;
+    border-radius:18px;
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#5ee7df;
+}
+
+.card h3{
+    color:#5ee7df;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#aebbd0;
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.skill{
+    padding:10px 17px;
+    background:#101d2e;
+    border:1px solid #29384c;
+    border-radius:30px;
+    color:#c2ccda;
+}
+
+.skill:hover{
+    color:#5ee7df;
+    border-color:#5ee7df;
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.project-number{
+    color:#5ee7df;
+    font-size:13px;
+    margin-bottom:12px;
+}
+
+.project h3{
+    font-size:21px;
+}
+
+.project p{
+    margin:12px 0;
+}
+
+.tech{
+    color:#4facfe;
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* TIMELINE */
+.timeline{
+    max-width:850px;
+    margin:auto;
+}
+
+.timeline-item{
+    border-left:2px solid #5ee7df;
+    padding:0 0 35px 30px;
+    position:relative;
+}
+
+.timeline-item:before{
+    content:"";
+    position:absolute;
+    left:-7px;
+    top:0;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#5ee7df;
+}
+
+.timeline-item h3{
+    font-size:20px;
+}
+
+.date{
+    color:#5ee7df;
+    font-size:13px;
+}
+
+.timeline-item p{
+    color:#aebbd0;
+    margin-top:8px;
+}
+
+/* CERTIFICATIONS */
+.certs{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.cert{
+    background:#101d2e;
+    border:1px solid #29384c;
+    border-radius:15px;
+    padding:22px;
+    color:#aebbd0;
+}
+
+.cert strong{
+    color:#fff;
+    display:block;
+    margin-bottom:5px;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+    background:#101d2e;
+    border:1px solid #29384c;
+    border-radius:25px;
+    padding:50px;
+}
+
+.contact p{
+    color:#aebbd0;
+    max-width:650px;
+    margin:15px auto;
+}
+
+/* FOOTER */
+footer{
+    border-top:1px solid #29384c;
+    text-align:center;
+    padding:30px;
+    color:#8f9db2;
+}
+
+footer span{
+    color:#5ee7df;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    .hero-grid,
+    .grid,
+    .projects,
+    .certs{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero p{
+        margin:auto;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+<div class="container nav">
+
+<div class="logo">LRN.</div>
+
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+<header class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<span class="tag">BUSINESS • DATA • TECHNOLOGY</span>
+
+<h1>
+Lakshman<br>
+<span class="gradient">Ragul N</span>
+</h1>
+
+<h2>Aspiring Business Analyst</h2>
+
+<p>
+BBA Information Systems student passionate about business analytics,
+data-driven decision making, technology, and turning ideas into
+practical solutions.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary"
+href="Lakshman_Ragul_N_Resume.pdf"
+target="_blank">
+📄 View Resume
+</a>
+
+<a class="btn secondary"
+href="https://www.linkedin.com/in/lakshman-ragul-b87650340/"
+target="_blank">
+🔗 LinkedIn
+</a>
+
+<a class="btn secondary"
+href="#projects">
+🚀 Projects
+</a>
+
+</div>
+
+</div>
+
+
+<div class="profile-card">
+
+<div class="profile-icon">
+LR
+</div>
+
+<h3>Lakshman Ragul N</h3>
+
+<p>BBA Information Systems</p>
+
+<p>PSG College of Arts and Science</p>
+
+<br>
+
+<p>
+📊 Business Analytics<br>
+🗄️ SQL & Excel<br>
+💡 Data-driven Thinking
+</p>
+
+</div>
+
+</div>
+</header>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<span>Get to know me</span>
+<h2>About Me</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Who I Am</h3>
+
+<p>
+I am a BBA Information Systems student interested in the
+intersection of business, technology, and innovation.
+</p>
+
+<br>
+
+<p>
+I enjoy analyzing information, understanding business problems,
+exploring technology, and turning ideas into practical outcomes.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Career Focus</h3>
+
+<p>
+I am building my career toward Business Analysis, Data Analysis,
+and Business Intelligence roles.
+</p>
+
+<br>
+
+<p>
+My goal is to combine business understanding, analytical thinking,
+and technology to solve real-world problems.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+<div class="container">
+
+<div class="section-title">
+<span>What I work with</span>
+<h2>Skills</h2>
+</div>
+
+<div class="skills">
+
+<div class="skill">SQL</div>
+<div class="skill">Microsoft Excel</div>
+<div class="skill">Business Analytics</div>
+<div class="skill">Data Analysis</div>
+<div class="skill">Google Analytics</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">PowerPoint</div>
+<div class="skill">Canva</div>
+<div class="skill">Communication</div>
+<div class="skill">Leadership</div>
+<div class="skill">Teamwork</div>
+<div class="skill">Event Management</div>
+<div class="skill">Problem Solving</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>My work</span>
+
+<h2>Featured Projects</h2>
+
+<p>
+Business-focused projects demonstrating data analysis,
+problem solving, and decision-making.
+</p>
+
+</div>
+
+
+<div class="projects">
+
+<div class="card project">
+
+<div class="project-number">01 / ANALYTICS</div>
+
+<h3>🛒 Retail Sales Analysis</h3>
+
+<p>
+Analyze sales, profit, product performance, and regional trends
+to identify business opportunities.
+</p>
+
+<div class="tech">
+SQL • Excel • Power BI
+</div>
+
+</div>
+
+
+<div class="card project">
+
+<div class="project-number">02 / CUSTOMER</div>
+
+<h3>👥 Customer Churn Analysis</h3>
+
+<p>
+Explore customer behavior and identify patterns associated
+with customer churn and retention.
+</p>
+
+<div class="tech">
+SQL • Excel • Power BI
+</div>
+
+</div>
+
+
+<div class="card project">
+
+<div class="project-number">03 / BUSINESS</div>
+
+<h3>🛍️ E-Commerce Analysis</h3>
+
+<p>
+Analyze revenue, purchasing behavior, product performance,
+and customer trends.
+</p>
+
+<div class="tech">
+SQL • Excel • Power BI
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- EXPERIENCE -->
+<section id="experience">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>My journey</span>
+
+<h2>Experience & Leadership</h2>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<h3>Co-Founder — ONE & ONLY</h3>
+
+<div class="date">
+Jul 2025 – Present
+</div>
+
+<p>
+Worked on strategic planning, organizational structure,
+performance analysis, and business growth.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>Chief Editor — PSG College of Arts and Science</h3>
+
+<div class="date">
+Jun 2026 – Present
+</div>
+
+<p>
+Lead editing and content refinement for departmental events,
+publications, announcements, and academic materials.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>Face Club Chairperson</h3>
+
+<div class="date">
+Jun 2026 – Present
+</div>
+
+<p>
+Lead planning and execution of cross-departmental events,
+student engagement, networking, and collaboration.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>HR Intern — EDISION ELECTRIC INDUSTRIES</h3>
+
+<div class="date">
+May 2025 – Jun 2025
+</div>
+
+<p>
+Supported data collection, process improvement, and analysis
+related to future business growth.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>Joint Secretary — PSG College of Arts and Science</h3>
+
+<div class="date">
+Jun 2024 – May 2025
+</div>
+
+<p>
+Coordinated events, guest lectures, conferences,
+competitions, and business pitching events.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Academic background</span>
+
+<h2>Education</h2>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🎓 BBA Information Systems</h3>
+
+<p>
+<strong>PSG College of Arts and Science</strong><br>
+Coimbatore
+</p>
+
+<br>
+
+<p>
+2024 – 2027 (Expected)
+</p>
+
+<p>
+CGPA: <strong>8.3</strong>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>📚 School Education</h3>
+
+<p>
+<strong>Cambridge Matric. Hr. Sec. School</strong><br>
+Cheyur
+</p>
+
+<br>
+
+<p>
+12th Grade: 94.4%
+</p>
+
+<p>
+10th Grade: 87.4%
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CERTIFICATIONS -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Continuous learning</span>
+
+<h2>Certifications</h2>
+
+</div>
+
+
+<div class="certs">
+
+<div class="cert">
+<strong>Career Essentials in Data Analysis</strong>
+Microsoft
+</div>
+
+<div class="cert">
+<strong>Introduction to Business Analytics</strong>
+LinkedIn
+</div>
+
+<div class="cert">
+<strong>Artificial Intelligence and Business Strategy</strong>
+LinkedIn
+</div>
+
+<div class="cert">
+<strong>HR Foundations: Core Human Resources</strong>
+SHRM / LinkedIn
+</div>
+
+<div class="cert">
+<strong>Soft Skills Development</strong>
+NPTEL
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Beyond academics</span>
+
+<h2>Achievements</h2>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+<h3>🥋 Karate</h3>
+<p>
+All India Open Karate Championship —
+Shito Ryu Gold Medalist
+</p>
+</div>
+
+<div class="card">
+<h3>🏐 Volleyball</h3>
+<p>
+Volleyball Zone — Captain and Runner-up
+</p>
+</div>
+
+<div class="card">
+<h3>🏅 Student of the Year</h3>
+<p>
+Recognized as Student of the Year.
+</p>
+</div>
+
+<div class="card">
+<h3>🏕️ Scouts & Guides</h3>
+<p>
+Bharat Scouts & Guides — Chaturtha Charan
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- RESUME -->
+<section>
+
+<div class="container">
+
+<div class="contact">
+
+<div class="section-title">
+
+<span>Professional Profile</span>
+
+<h2>My Resume</h2>
+
+</div>
+
+<p>
+Interested in learning more about my education, experience,
+skills, certifications, and achievements?
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<a class="btn primary"
+href="Lakshman_Ragul_N_Resume.pdf"
+target="_blank">
+📄 View My Resume
+</a>
+
+<a class="btn secondary"
+href="Lakshman_Ragul_N_Resume.pdf"
+download>
+⬇ Download Resume
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="container">
+
+<div class="contact">
+
+<div class="section-title">
+
+<span>Let's connect</span>
+
+<h2>Get In Touch</h2>
+
+</div>
+
+<p>
+I'm open to connecting with recruiters, professionals,
+collaborators, and opportunities in Business Analysis,
+Data Analysis, and Business Intelligence.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<a class="btn primary"
+href="mailto:sendragul@gmail.com">
+📧 Email Me
+</a>
+
+<a class="btn secondary"
+href="https://www.linkedin.com/in/lakshman-ragul-b87650340/"
+target="_blank">
+💼 LinkedIn
+</a>
+
+<a class="btn secondary"
+href="Lakshman_Ragul_N_Resume.pdf"
+target="_blank">
+📄 Resume
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 <span>Lakshman Ragul N</span> |
+Business Analytics Portfolio
+</p>
+
+</footer>
+
+</body>
+</html>
